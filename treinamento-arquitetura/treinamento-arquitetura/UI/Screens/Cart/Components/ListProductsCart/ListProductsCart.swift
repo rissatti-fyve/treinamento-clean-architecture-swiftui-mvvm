@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ListProductsCart: View {
-    @State var isLoading: Bool = true
     @EnvironmentObject var cart: Cart
     
     var body: some View {

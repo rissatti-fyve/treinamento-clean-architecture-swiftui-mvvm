@@ -8,15 +8,6 @@
 import SwiftUI
 
 struct Address: View {
-    @State private var cep = ""
-    @State private var logradouro = ""
-    @State private var numero = ""
-    @State private var bairro = ""
-    @State private var complemento = ""
-    @State private var cidade = ""
-    @State private var estado = ""
-    @State private var responseSerach: AddressType = AddressType(cep: "", street: "", neighborhood: "", city: "", state: "", freight: "")
-    
     @StateObject private var vm = AddressViewModel(
         useCase: SearchAddressByCepImp(
             repository: SearchAddressByCepRepositoryImpl()
@@ -34,24 +25,20 @@ struct Address: View {
                     required: true,
                     onCommit: {
                         Task {
-                                   responseSerach = await vm.getAllProductsToList(cep: cep)
-                                self.logradouro = responseSerach.street
-                                self.bairro = responseSerach.neighborhood
-                                self.cidade = responseSerach.city
-                                self.estado = responseSerach.state
+                            await vm.searchAddresByCep(cep: vm.cep)
                                }
                     } ,
-                    value: $cep
+                    value: $vm.cep
                 )
                 HStack(spacing: 12){
-                    InputTitled(title: "Logradouro", size: 2/3,padding: 16, required: true, onCommit: {}, value: $logradouro)
-                    InputTitled(title: "Número", size: 1/3,padding: 16,required: true, onCommit: {}, value: $numero)
+                    InputTitled(title: "Logradouro", size: 2/3,padding: 16, required: true, onCommit: {}, value: $vm.logradouro)
+                    InputTitled(title: "Número", size: 1/3,padding: 16,required: true, onCommit: {}, value: $vm.numero)
                 }
-                InputTitled(title: "Bairro", size: 1,padding: 24, required: false, onCommit: {}, value: $bairro)
-                InputTitled(title: "Complemento", size: 1,padding: 24, required: false, onCommit: {}, value: $complemento)
+            InputTitled(title: "Bairro", size: 1,padding: 24, required: false, onCommit: {}, value: $vm.bairro)
+            InputTitled(title: "Complemento", size: 1,padding: 24, required: false, onCommit: {}, value: $vm.complemento)
                 HStack(spacing: 12){
-                    InputTitled(title: "Cidade", size: 2/3,padding: 16, required: true, onCommit: {}, value: $cidade)
-                    InputTitled(title: "Estado", size: 1/3,padding: 16, required: true, onCommit: {}, value: $estado)
+                    InputTitled(title: "Cidade", size: 2/3,padding: 16, required: true, onCommit: {}, value: $vm.cidade)
+                    InputTitled(title: "Estado", size: 1/3,padding: 16, required: true, onCommit: {}, value: $vm.estado)
                 }
             .padding(.top,12)
         }

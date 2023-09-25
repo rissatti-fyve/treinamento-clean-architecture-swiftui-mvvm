@@ -63,6 +63,7 @@
 		70BE26872AC1D7DE00362426 /* DeleteProductImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE26862AC1D7DE00362426 /* DeleteProductImpl.swift */; };
 		70BE26892AC1D7EB00362426 /* DeleteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE26882AC1D7EB00362426 /* DeleteProduct.swift */; };
 		70BE268B2AC1EFCA00362426 /* GetProductByNameUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE268A2AC1EFCA00362426 /* GetProductByNameUseCase.swift */; };
+		70BE268D2AC1F94500362426 /* CardProductCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE268C2AC1F94500362426 /* CardProductCartViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		70BE26862AC1D7DE00362426 /* DeleteProductImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductImpl.swift; sourceTree = "<group>"; };
 		70BE26882AC1D7EB00362426 /* DeleteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProduct.swift; sourceTree = "<group>"; };
 		70BE268A2AC1EFCA00362426 /* GetProductByNameUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductByNameUseCase.swift; sourceTree = "<group>"; };
+		70BE268C2AC1F94500362426 /* CardProductCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProductCartViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				7096A86D2ABDD9F8005B73AD /* CardProductCart.swift */,
+				70BE268C2AC1F94500362426 /* CardProductCartViewModel.swift */,
 			);
 			path = CardProductCart;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				70B6CC102ABCBAF400C8DE7A /* LoadingBar.swift in Sources */,
 				7096A84F2ABDB9A6005B73AD /* AddressType.swift in Sources */,
 				703862C52ABB16E000EE81CE /* Home.swift in Sources */,
+				70BE268D2AC1F94500362426 /* CardProductCartViewModel.swift in Sources */,
 				7096A8512ABDB9DB005B73AD /* SearchAddressByCepUseCase.swift in Sources */,
 				7096A8742ABDF521005B73AD /* SensPostRequestImpl.swift in Sources */,
 				703862F22ABB3B3100EE81CE /* GetAllProductRepository.swift in Sources */,
